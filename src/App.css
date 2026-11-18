@@ -1,0 +1,638 @@
+/* إعدادات عامة وتنسيق الألوان */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'system-ui', -apple-system, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e1b4b;
+  direction: rtl;
+  text-align: right;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* شريط التنقل Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(109, 40, 217, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #6d28d9;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #4c1d95;
+}
+
+.logo-icon {
+  background: #ede9fe;
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6d28d9;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.login-btn {
+  background: transparent;
+  border: 2px solid #6d28d9;
+  color: #6d28d9;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background: #f5f3ff;
+}
+
+.register-btn {
+  background: #6d28d9;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.register-btn:hover {
+  background: #5b21b6;
+}
+
+/* الواجهة الرئيسية Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  padding: 5rem 5%;
+  gap: 3rem;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ede9fe;
+  color: #6d28d9;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1e1b4b;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content h1 span {
+  color: #6d28d9;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.primary-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #6d28d9;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(109, 40, 217, 0.2);
+  transition: transform 0.2s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: #6d28d9;
+  border: 2px solid #ede9fe;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.secondary-btn:hover {
+  background: #faf8ff;
+}
+
+.hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rating-icon {
+  background: #ede9fe;
+  color: #6d28d9;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+/* بطاقة الجانب الأيمن في الـ Hero */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(109, 40, 217, 0.08);
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid #f3e8ff;
+}
+
+.hero-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-card-icon {
+  background: #f5f3ff;
+  color: #6d28d9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.online-status {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.hero-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+.progress-bar {
+  background: #f1f5f9;
+  height: 8px;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  background: #6d28d9;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.hero-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #6b7280;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
+}
+
+.hero-card-bottom span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* شريط الإحصائيات Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 3rem 5%;
+  background: white;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #faf8ff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  border: 1px solid #f3e8ff;
+}
+
+.stat-item svg {
+  color: #6d28d9;
+  width: 32px;
+  height: 32px;
+}
+
+.stat-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.stat-item p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* المراحل التعليمية Stages */
+.stages-section {
+  padding: 5rem 5%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.section-heading span {
+  color: #6d28d9;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e1b4b;
+  margin: 0.5rem 0 1rem;
+}
+
+.section-heading p {
+  color: #6b7280;
+}
+
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.stage-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(109, 40, 217, 0.08);
+  border-color: #ddd6fe;
+}
+
+.stage-icon {
+  font-size: 2.5rem;
+  background: #f5f3ff;
+  padding: 15px;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.stage-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #1e1b4b;
+}
+
+.stage-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.grade-label {
+  background: #ede9fe;
+  color: #6d28d9;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.stage-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #6d28d9;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+/* مميزات المنصة Features */
+.features-section {
+  padding: 5rem 5%;
+  background: #f5f3ff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(109, 40, 217, 0.03);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card svg {
+  color: #6d28d9;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1.5rem;
+  background: #ede9fe;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1e1b4b;
+}
+
+.feature-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* تذييل الصفحة Footer */
+.footer {
+  background: #1e1b4b;
+  color: white;
+  padding: 4rem 5% 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: auto;
+}
+
+.footer .logo {
+  color: white;
+}
+
+.footer .logo span {
+  color: #c4b5fd;
+}
+
+.footer p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.footer span {
+  color: #6b7280;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .hero-rating {
+    justify-content: center;
+  }
+
+  .nav-links, .nav-actions {
+    display: none;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* تصميم الفوتر الاحترافي الجديد لمنصة EduZone */
+.footer-container {
+  background-color: #1e1b4b;
+  color: white;
+  padding: 4rem 5% 2rem;
+  margin-top: auto;
+  direction: rtl;
+  text-align: right;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 3rem;
+}
+
+.footer-col h4 {
+  font-size: 1.15rem;
+  color: #c4b5fd;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.footer-col ul li a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: white;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.2rem;
+}
+
+.social-icon-box {
+  background: rgba(109, 40, 217, 0.3);
+  color: #c4b5fd;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.social-icon-box:hover {
+  background: #6d28d9;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.payment-methods {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.payment-badge {
+  background: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #1e1b4b;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
